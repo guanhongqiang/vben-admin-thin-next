@@ -23,6 +23,8 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   rules: {
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['off'],
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
@@ -35,20 +37,20 @@ module.exports = {
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      {
-        argsIgnorePattern: '^h$',
-        varsIgnorePattern: '^h$',
-      },
-    ],
-    'no-unused-vars': [
-      'error',
-      {
-        argsIgnorePattern: '^h$',
-        varsIgnorePattern: '^h$',
-      },
-    ],
+    // '@typescript-eslint/no-unused-vars': [
+    //   'error',
+    //   {
+    //     argsIgnorePattern: '^h$',
+    //     varsIgnorePattern: '^h$',
+    //   },
+    // ],
+    // 'no-unused-vars': [
+    //   'error',
+    //   {
+    //     argsIgnorePattern: '^h$',
+    //     varsIgnorePattern: '^h$',
+    //   },
+    // ],
     'space-before-function-paren': 'off',
 
     'vue/attributes-order': 'off',

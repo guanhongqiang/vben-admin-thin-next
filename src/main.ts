@@ -48,7 +48,7 @@ import { isDevMode } from '/@/utils/env';
   setupErrorHandle(app);
 
   // Mount when the route is ready
-  await router.isReady();
+  await Promise.all([setupI18n(app), router.isReady()]);
 
   app.mount('#app', true);
 

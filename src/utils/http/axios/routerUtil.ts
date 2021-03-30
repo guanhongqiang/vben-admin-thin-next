@@ -1,6 +1,6 @@
-export const generator = (routerMap, parent?) => {
+export const generator = (routerMap, _parent?) => {
   return routerMap.map((item) => {
-    let hasChildren = item.children && item.children.length > 0;
+    const hasChildren = item.children && item.children.length > 0;
 
     //   if (!hasParent) {
     //     component = '/dashboard/welcome/index';
@@ -10,7 +10,7 @@ export const generator = (routerMap, parent?) => {
     //   } else if (item.path) {
     //     component = () => import(`@/views${item.path}`);
     //   }
-    let currentRouter = {
+    const currentRouter = {
       path: item.path,
       // 路由名称，建议唯一
       name: item.title,

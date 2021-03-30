@@ -110,9 +110,9 @@ class Permission extends VuexModule {
       if (!paramId) {
         throw new Error('paramId is undefined!');
       }
-      let res = (await getMenuListById()) as AppRouteRecordRaw[];
+      const res = (await getMenuListById()) as AppRouteRecordRaw[];
 
-      let resRouters = generator(res);
+      const resRouters = generator(res);
 
       // 开发模式额外路由
       //   let devRouter = [
@@ -156,7 +156,6 @@ class Permission extends VuexModule {
       //     routeList.push(...devRouter);
       //   }
       let routeList = resRouters;
-      console.log(routeList);
       //   //首页根路由
       //   let rootRouter = {
       //     // 路由地址 动态拼接生成如 /dashboard/workplace

@@ -139,6 +139,7 @@
 
         // menuState.openKeys = [parentPath];
         menuState.selectedKeys = [key];
+        console.log(2222222);
       }
 
       async function handleMenuChange(route?: RouteLocationNormalizedLoaded) {
